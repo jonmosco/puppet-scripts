@@ -3,7 +3,7 @@ FACT1 = "operatingsystemrelease"
 FACT2 = "ipaddress"
 
 now = Time.now.strftime("%d/%m/%Y %I:%M")
-puts "HMS Inventory report: " + now
+puts "Inventory report: " + now
 
 inventory do
     format "%40s:\t\t%20s\t\t%s"
