@@ -7,11 +7,11 @@ PUPPET_REPO_EL7=http://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 
 # Lets install Puppet!
 if cat /etc/*release | grep -e "CentOS" -e "RedHat" &> /dev/null; then
-  if cat /etc/*release | grep -e "6" &> /dev/null; then
+  if cat /etc/redhat-release | grep -e "6" &> /dev/null; then
     rpm -ivh $PUPPET_REPO_EL6
     yum install -y puppet-agent
     chkconfig puppet on
-  elif cat /etc/*release | grep -e "7" &> /dev/null; then
+  elif cat /etc/redhat-release | grep -e "7" &> /dev/null; then
     rpm -ivh $PUPPET_REPO_EL7
     yum install -y puppet-agent
     systemctl enable puppet.service
