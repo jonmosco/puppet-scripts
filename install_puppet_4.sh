@@ -2,7 +2,7 @@
 #
 # Install the Puppet 4 Agent
 
-PUPPET_REPO_EL6=http://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+PUPPET_REPO_EL6=http://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm
 PUPPET_REPO_EL7=http://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 
 # Lets install Puppet!
@@ -22,4 +22,4 @@ fi
 
 # Set up the new path
 echo "pathmunge /opt/puppetlabs/bin" > /etc/profile.d/puppet.sh
-source ./profile
+source /etc/profile
