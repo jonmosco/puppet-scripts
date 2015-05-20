@@ -22,6 +22,5 @@ fi
 
 # Set up the new path
 echo "pathmunge /opt/puppetlabs/bin" > /etc/profile.d/puppet.sh
-source /etc/profile
 echo "Puppet executibles are located in /opt/puppetlabs.  Source /etc/profile.d/puppet
 to update your PATH"
