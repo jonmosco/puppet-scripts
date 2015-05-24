@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Install the Puppet 4 Agent
+# Install the Puppet 4 Agent on EL systems
 
 PUPPET_REPO_EL6=http://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm
 PUPPET_REPO_EL7=http://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
