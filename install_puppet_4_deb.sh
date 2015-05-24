@@ -11,13 +11,13 @@ if `lsb_release -a` | grep -e "14" &> /dev/null; then
   dpkg -i  $PUPPET_REPO_14
   apt-get update
   apt-get install -y puppet-agent
-  update-rc.d puppet-agent defaults
+  update-rc.d puppet defaults
 elif `lsb_release -a` | grep -e "12" &> /dev/null; then
   /usr/bin/wget http://apt.puppetlabs.com/${PUPPET_REPO_12}
   dpkg -i $PUPPET_REPO_12
   apt-get update
   apt-get install -y puppet-agent
-  update-rc.d puppet-agent defaults
+  update-rc.d puppet defaults
 else
   echo "Unsupported Version of Ubuntu Linux"
 fi
