@@ -11,6 +11,7 @@ if `lsb_release -a` | grep -e "trusty" &> /dev/null; then
   /usr/bin/wget http://apt.puppetlabs.com/${PUPPET_REPO_14}
   dpkg -i  $PUPPET_REPO_14
   apt-get update &> /dev/null
+  sleep 5
   apt-get install -y puppet-agent
   update-rc.d puppet defaults
 elif `lsb_release -a` | grep -e "precise" &> /dev/null; then
