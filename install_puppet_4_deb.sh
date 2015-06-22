@@ -2,7 +2,15 @@
 #
 # Install the Puppet 4 Agent on Debian systems
 
+# Debian
+# Wheezy: 7
+# Jessie: 8
+PUPPET_REPO_WHEEZY=puppetlabs-release-wheezy.deb
 PUPPET_REPO_JESSIE=puppetlabs-release-jessie.deb
+
+# Ubuntu
+# Trusty: 14
+# Precise: 12
 PUPPET_REPO_14=puppetlabs-release-pc1-trusty.deb
 PUPPET_REPO_12=puppetlabs-release-pc1-precise.deb
 
@@ -26,6 +34,12 @@ elif `lsb_release -a` | grep -e "jessie" &> /dev/null; then
   apt-get update &> /dev/null
   apt-get install -y puppet-agent
   systemctl enable puppet
+elif `lsb_release -a` | grep -e "wheezy" &> /dev/null; then
+  /usr/bin/wget http://apt.puppetlabs.com/${PUPPET_REPO_WHEEZY}
+  dpkg -i $PUPPET_REPO_WHEEZY
+  apt-get update &> /dev/null
+  apt-get install -y puppet-agent
+  update-rc.d puppet defaults
 else
   echo "Unsupported Version of Debian Linux"
 fi
