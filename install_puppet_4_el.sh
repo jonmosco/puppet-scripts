@@ -21,5 +21,5 @@ if cat /etc/*release | grep -e "CentOS" -e "RedHat" &> /dev/null; then
 fi
 
 # Set up the new path
-echo "pathmunge /opt/puppetlabs/bin" > /etc/profile.d/puppet.sh
+echo "export PATH=$PATH:/opt/puppetlabs/bin" > /etc/profile.d/puppet.sh
 echo "Puppet executibles are located in /opt/puppetlabs.  Run 'source /etc/profile' to update your PATH"
