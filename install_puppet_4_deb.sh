@@ -9,10 +9,10 @@ PUPPET_REPO_WHEEZY=puppetlabs-release-wheezy.deb
 PUPPET_REPO_JESSIE=puppetlabs-release-jessie.deb
 
 # Ubuntu
-# Trusty: 14
 # Precise: 12
-PUPPET_REPO_14=puppetlabs-release-pc1-trusty.deb
+# Trusty: 14
 PUPPET_REPO_12=puppetlabs-release-pc1-precise.deb
+PUPPET_REPO_14=puppetlabs-release-pc1-trusty.deb
 
 # Lets install Puppet!
 if `lsb_release -a` | grep -e "trusty" &> /dev/null; then
