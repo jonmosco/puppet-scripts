@@ -11,32 +11,40 @@ PUPPET_REPO_JESSIE=puppetlabs-release-jessie.deb
 # Ubuntu
 # Precise: 12
 # Trusty: 14
+# Xenial: 16
 PUPPET_REPO_12=puppetlabs-release-pc1-precise.deb
 PUPPET_REPO_14=puppetlabs-release-pc1-trusty.deb
+PUPPET_REPO_16=puppetlabs-release-pc1-xenial.deb
 
 # Lets install Puppet!
-if `lsb_release -a` | grep -e "trusty" &> /dev/null; then
+if lsb_release -a | grep -e "trusty" &> /dev/null; then
   /usr/bin/wget http://apt.puppetlabs.com/${PUPPET_REPO_14}
   dpkg -i  $PUPPET_REPO_14
   apt-get update &> /dev/null
   sleep 5
   apt-get install -y puppet-agent
   update-rc.d puppet defaults
-elif `lsb_release -a` | grep -e "precise" &> /dev/null; then
+elif lsb_release -a | grep -e "precise" &> /dev/null; then
   /usr/bin/wget http://apt.puppetlabs.com/${PUPPET_REPO_12}
   dpkg -i $PUPPET_REPO_12
   apt-get update &> /dev/null
   apt-get install -y puppet-agent
   update-rc.d puppet defaults
-elif `lsb_release -a` | grep -e "jessie" &> /dev/null; then
+elif lsb_release -a | grep -e "jessie" &> /dev/null; then
   /usr/bin/wget http://apt.puppetlabs.com/${PUPPET_REPO_JESSIE}
   dpkg -i $PUPPET_REPO_JESSIE
   apt-get update &> /dev/null
   apt-get install -y puppet-agent
   systemctl enable puppet
-elif `lsb_release -a` | grep -e "wheezy" &> /dev/null; then
+elif lsb_release -a | grep -e "wheezy" &> /dev/null; then
   /usr/bin/wget http://apt.puppetlabs.com/${PUPPET_REPO_WHEEZY}
   dpkg -i $PUPPET_REPO_WHEEZY
+  apt-get update &> /dev/null
+  apt-get install -y puppet-agent
+  update-rc.d puppet defaults
+elif lsb_release -a | grep -e "xenial" &> /dev/null; then
+  /usr/bin/wget http://apt.puppetlabs.com/${PUPPET_REPO_16}
+  dpkg -i $PUPPET_REPO_16
   apt-get update &> /dev/null
   apt-get install -y puppet-agent
   update-rc.d puppet defaults
