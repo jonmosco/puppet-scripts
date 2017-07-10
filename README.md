@@ -1,11 +1,19 @@
-##Puppet related scripts
-Various scripts for managing Puppet
+Puppet related scripts
+======================
+A collection of scripts for installing Puppet on EL and Debian based
+systems.
+
+This repo tries to follow the official Puppet Docs.
+Puppet 4: See [docs.puppet.com](https://docs.puppet.com/puppet/4.10/puppet_collections.html) for the manual steps
+Puppet 5: See [docs.puppet.com](https://docs.puppet.com/puppet/5.0/puppet_platform.html) for the manual steps
 
 ###Agent Installation scripts
-* install_puppet_4_deb.sh
-* install_puppet_4_el.sh
-* install_puppet_server_deb.sh
-* install_puppet_server_el.sh
+* Puppet 4
+  * install_puppet_4_deb.sh
+  * install_puppet_4_el.sh
+* Puppet 5
+  * install_puppet_5_deb.sh
+  * install_puppet_5_el.sh
 
 ###Misc
 * distro_inventory.rb
