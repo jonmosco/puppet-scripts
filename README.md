@@ -18,6 +18,23 @@ Agent Installation scripts
   * install_puppet_5_deb.sh
   * install_puppet_5_el.sh
 
+Usage
+-----
+
+Copy either the EL or Deb script to your host in /tmp, and run the script:
+
+```
+$ chmod +x install_puppet_5_el.sh
+$ sudo ./install_puppet_5_el.sh
+```
+
+Verify the installation:
+
+```
+$ source /etc/profile
+$ puppet -V
+```
+
 Misc
 ----
 
