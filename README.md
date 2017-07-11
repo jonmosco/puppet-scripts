@@ -12,7 +12,7 @@ Agent Installation scripts
 --------------------------
 
 The agent install scripts follow the official puppet docs.  It will check which
-version of enterprise linux, or Debian derivative and install the appropriate
+version of enterprise linux, Debian derivative, install the appropriate
 repository, and install the puppet agent package.  After, it will enable the
 service and add /opt/puppetlabs/bin to the PATH.
 
