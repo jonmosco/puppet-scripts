@@ -26,7 +26,7 @@ service and add /opt/puppetlabs/bin to the PATH.
 Usage
 -----
 
-Copy the script, or clone this repo to your host in /tmp, and run the script:
+Copy the script, or clone this repo to your host , and run the script for your platform:
 
 ```
 $ chmod +x install_puppet_5_el.sh
